@@ -226,7 +226,8 @@ header {
     right: -200px;
     background-color: rgb(103, 42, 25);
     border: 3px solid #0b361f;
-    transition: right 1s;
+    transition: right 0.4s;
+    z-index: 100;
 }
 
 .nav-mobile ul {
