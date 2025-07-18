@@ -1,0 +1,251 @@
+:root {
+  --himiko-header: 4rem;
+  --himiko-footer: 2rem;
+  --himiko-main: calc(100vh - (var(--himiko-header) + var(--himiko-footer)));
+}
+
+@font-face {
+  font-family: "My Hero Academia";
+  src: url("/fonts/My-Hero-Academia.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Caledonia";
+  src: url("/fonts/NewCaledoniaLTStdSmBold.ttf") format("truetype");
+}
+
+body {
+  background-color: black;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  font-family: "Caledonia";
+}
+
+body::before {
+  content: "";
+  background-image: url("/images/himiko-toga-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 70% 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "My Hero Academia";
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+a:visited {
+  color: #ffd8a8;
+}
+
+h1,
+h2,
+h3 {
+  -webkit-text-stroke: 0.7px black;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
+}
+
+.wrapper {
+  height: 100dvh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(103, 42, 25, 0.8);
+  border-bottom: 1px solid black;
+  height: var(--himiko-header);
+  padding-right: 8px;
+
+  & image {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hamburger-menu {
+  width: 2.5rem;
+
+  & div {
+    margin: 0.3rem;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+}
+
+main {
+  height: var(--himiko-main);
+  overflow-y: auto;
+}
+
+/*  
+============================================== 
+               TOGA HOMEPAGE                           
+============================================== 
+*/
+
+/* BANNER STYLES */
+
+.homepage-banner,
+.about-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(103, 42, 25, 0.8);
+  border-top: 3px solid #0b361f;
+  border-bottom: 3px solid #0b361f;
+  margin-top: 10px;
+  padding: 5px 0;
+
+  & .banner-text {
+    max-width: 250px;
+  }
+}
+
+.card-container {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card-container article {
+  width: 350px;
+  height: 233px;
+  background-color: rgba(103, 42, 25, 0.8);
+  border: 3px solid #0b361f;
+}
+
+/* TOGA CARD GENERAL STYLES */
+
+.card-container article {
+  display: grid;
+}
+
+.card-container img {
+  padding-top: 10px;
+}
+
+.card-text {
+  justify-self: center;
+  padding-top: 40px;
+  width: 180px;
+}
+
+.card-text *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+/* TOGA ABOUT CARD */
+
+.toga-about-card {
+  grid-template-columns: 0.7fr 1fr;
+  overflow: hidden;
+}
+
+/* TOGA QUIRK CARD */
+
+.toga-quirk-card {
+  grid-template-columns: 1fr 0.6fr;
+  overflow: hidden;
+}
+
+/* TOGA STORY CARD */
+
+.toga-story-card {
+  grid-template-columns: 0.7fr 1fr;
+  overflow: hidden;
+}
+
+/*  
+============================================== 
+               TOGA ABOUT PAGE                           
+============================================== 
+*/
+
+/* GENERAL STYLES */
+
+.toga-info {
+  display: grid;
+  background-color: rgba(103, 42, 25, 0.8);
+  border: 3px solid #0b361f;
+}
+
+/* TOGA INFO 1 */
+
+.toga-information-1 {
+  display: grid;
+  justify-content: center;
+  gap: 2px;
+  margin: 2px 0;
+}
+
+.toga-info-1 {
+  grid-template-columns: 1fr 0.7fr;
+  overflow: hidden;
+  width: 350px;
+  height: 286px;
+}
+
+.toga-info-1 ul {
+  margin-top: 5px;
+}
+
+.toga-info-1 li {
+  color: #ffd8a8;
+  font-size: 18px;
+  margin-left: -10px;
+}
+
+/* TOGA INFO 2 */
+
+.toga-information-2 {
+  display: flex;
+}
+
+.toga-info-2 {
+  width: 240px;
+  height: 286px;
+  margin-right: 2px;
+}
+
+.toga-info-2-squares div {
+  width: 108px;
+  height: 142px;
+}
+
+.toga-info-2-squares > div {
+  margin-bottom: 2px;
+}
+
+footer p {
+  background-color: rgba(103, 42, 25, 0.8);
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--himiko-footer);
+}
