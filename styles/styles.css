@@ -1,7 +1,7 @@
 :root {
     --himiko-header: 4rem;
     --himiko-footer: 2rem;
-    --himiko-main: calc(100vh - (var(--himiko-header) + var(--himiko-footer)));
+    --himiko-main: calc(100dvh - (var(--himiko-header) + var(--himiko-footer)));
     --background-container-color: rgba(90, 32, 18, 0.9);
 }
 
@@ -18,8 +18,8 @@
 body {
     background-color: black;
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
     font-family: 'Caledonia', Cambria, Cochin, Georgia, Times, 'Times New Roman',
         serif;
 }
@@ -308,6 +308,7 @@ main {
 
 .card-container article {
     display: grid;
+    position: relative;
 }
 
 .card-container img {
@@ -323,6 +324,8 @@ main {
 .card-text a {
     display: block;
     justify-self: center;
+    width: 100%;
+    height: 100%;
 }
 
 .card-text *:not(:last-child) {
@@ -349,7 +352,7 @@ main {
 /* DISPLAY DESKTOP OR MOBILE QUIRK CARD SO IT ALTERNATES ON MOBILE AND FOLLOWS NORMAL FLOW ON TABLET OR DESKTOP */
 
 @media screen and (max-width: 45em) {
-    .card-container .toga-quirk-card-desktop {
+    .card-container a:nth-child(3) {
         display: none;
     }
 }
@@ -360,7 +363,7 @@ main {
         grid-template-columns: 0.6fr 1fr;
     }
 
-    .card-container .toga-quirk-card-mobile {
+    .card-container a:nth-child(2) {
         display: none;
     }
 }
