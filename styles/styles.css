@@ -108,7 +108,7 @@ header {
 
 .hamburger-menu {
     position: relative;
-    width: 30px;
+    width: 35px;
     height: 40px;
     cursor: pointer;
 }
@@ -123,8 +123,9 @@ header {
 
 .hamburger-menu span {
     width: 100%;
-    height: 5px;
-    background-color: black;
+    height: 8px;
+    background-color: #ffd8a8;
+    border: 2px solid black;
     border-radius: 25px;
     position: absolute;
     top: 50%;
@@ -307,6 +308,10 @@ main {
 
 /* TOGA CARD GENERAL STYLES */
 
+.card-container a {
+    text-decoration: none;
+}
+
 .card-container a:hover {
     transform: scale(1.02);
 }
@@ -324,6 +329,10 @@ main {
     justify-self: center;
     align-self: center;
     width: 200px;
+
+    & p:last-child {
+        text-decoration: underline;
+    }
 }
 
 .card-text *:not(:last-child) {
