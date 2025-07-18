@@ -70,8 +70,6 @@ li {
 }
 
 .wrapper {
-    display: grid;
-    grid-template-rows: min-content 1fr;
     height: 100dvh;
 }
 
